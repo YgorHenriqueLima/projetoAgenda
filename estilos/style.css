@@ -1,0 +1,62 @@
+:root{
+    --cor1: #ECECEC;
+    --cor2: #dad1d1;
+    --cor3: #248;
+    --cor4: #999;
+    --cor5: #ddd;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header.cabecalho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3AB795;
+    height: 50px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.559);
+}
+#nome-app{
+    color: var(--cor3);
+}
+nav.menu{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px 5px 0px 5px;
+    gap: 5px;
+}
+nav.menu > .aba{
+    background-color: var(--cor3);
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border: 20px;
+    border-radius: 10px 10px 0px 0px;
+    transition: 0.2s;
+}
+
+.abaSelecionada{
+    background-color: rgb(101, 142, 225) !important;
+    transform: translateY(-1px);
+    box-shadow: 1px 1px 10px;
+}
+.if_principal{
+    border: none;
+    width: 100vw;
+    height: 100vh;
+    overflow-x:hidden;
+}
+main.principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
