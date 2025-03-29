@@ -3,26 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilos/style.css">
+    <link rel="stylesheet" href="./estilos/principal.css">
     <title>ProjetoAgenda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
-    <header id="cabecalho" class="cabecalho">
-        <h1 id="nome-app">AgendApp</h1>
-    </header>
+    <div class="container-header">
+        <header id="cabecalho" class="cabecalho">
+            <h1 id="nome-app">AgendApp</h1>
+        </header>
+        <nav id="menu" class="menu">
+            
+            <button id="btn_home" class="aba abaSelecionada">
+                <span class="material-symbols-outlined">home</span>
+                <span>Home</span>
+            </button>
+            
+            <button id="btn_novo" class="aba">
+                <span class="material-symbols-outlined">add</span>
+                <span>Novo</span>
+            </button>
+            
+            <button id="btn_pesquisar" class="aba">
+                <span class="material-symbols-outlined">search</span>
+                <span>Pesquisar</span>
+            </button>
+            
+            <button id="btn_gestao" class="aba">
+                <span class="material-symbols-outlined">stress_management</span>
+                Gestão
+            </button>
+            
+            <button id="btn_sobre" class="aba">Sobre</button>
+        </nav>    
+    </div>
 
-    <nav id="menu" class="menu">
-        <button id="btn_home" class="aba abaSelecionada">Home</button>
-        <button id="btn_novo" class="aba">Novo</button>
-        <button id="btn_pesquisar" class="aba">Pesquisar</button>
-        <button id="btn_gestao" class="aba">Gestão</button>
-        <button id="btn_sobre" class="aba">Sobre</button>
-    </nav>
-    
     <main id="principal" class="principal">
         <iframe src="./home.html" name="if_principal" id="if_principal" class="if_principal"></iframe>
     </main>
 
-    <script src="script.js"></script>
+    <script src="./scripts/agenda.js"></script>
 </body>
 </html>

@@ -1,0 +1,108 @@
+:root {
+    --cor1: #ECEFF1;  /* Cinza claro acinzentado */
+    --cor2: #90A4AE;  /* Cinza médio */
+    --cor3: #263238;  /* Cinza escuro quase preto */
+    --cor4: #B0BEC5;  /* Cinza suave */
+    --cor5: #CFD8DC;  /* Cinza azulado claro */
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*-------------------HEADER---------------------------------------------*/
+.container-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--cor3);
+    padding: 10px 10px 0px 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-header .cabecalho {
+    display: flex;
+    margin: 0px 10px 14px 10px;
+    justify-content:flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.container-header .cabecalho > #nome-app {
+    color: #DDE7F2;
+    font-size: 1.8rem;
+}
+
+nav.menu {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    margin: 10px 10px 0px 10px;
+    width: 100%;
+}
+
+
+nav.menu > .aba {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-width: 80px;
+    height: 40px; /* Garante altura fixa */
+    
+    background: transparent;
+    user-select: none; /* Impede seleção de texto */
+    outline: none; /* Remove contorno padrão */
+    color: white;
+    padding: 10px 10px; /* Aumenta área clicável */
+    border: none;
+    cursor: pointer;
+    border-radius: 10px 10px 0px 0px;
+    transition: background-color 0.2s;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+nav.menu > .aba span,
+nav.menu > .aba .material-symbols-outlined{
+    user-select: none;
+    pointer-events: none;
+    padding: 4px;
+    margin: 1px;
+}
+
+nav.menu > .aba:hover {
+    background-color: rgba(0, 0, 0, 0.253);
+}
+
+.abaSelecionada {
+    background-color: var(--cor4) !important;
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Impede que o botão ou ícone fiquem com fundo ao clicar */
+nav.menu > .aba:active,
+nav.menu > .aba:focus {
+    background-color: var(--cor4);
+}
+/*---------------------------------------------------*/
+.if_principal {
+    border: none;
+    width: 100vw;
+    height: calc(100vh - 80px);  /* Ajustando altura do iframe */
+    overflow-x: hidden;
+    background-image: linear-gradient(to bottom, #F2F4F3, #758173);
+}
+
+main.principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 80px); /* Considerando a altura do cabeçalho */
+}

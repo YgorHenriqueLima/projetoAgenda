@@ -1,0 +1,72 @@
+:root {
+    --cor1: #ECEFF1;  /* Cinza claro acinzentado */
+    --cor2: #90A4AE;  /* Cinza médio */
+    --cor3: #263238;  /* Cinza escuro quase preto */
+    --cor4: #B0BEC5;  /* Cinza suave */
+    --cor5: #CFD8DC;  /* Cinza azulado claro */
+}
+
+
+.elementosForm {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 60vw;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.196); 
+}
+
+.campoForm {
+    margin-bottom: 15px;
+    width: 90%;
+}
+
+.campoForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--cor3); 
+}
+
+.campoForm input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--cor2);  
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.campoForm input:focus {
+    outline: none;
+    color: black;
+    background-color: var(--cor2);
+}
+
+.botoesForm {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.botoesForm button {
+    padding: 10px 20px;
+    background-color: var(--cor3);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botoesForm button:hover {
+    background-color: var(--cor4);
+}
