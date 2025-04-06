@@ -18,17 +18,19 @@ btn_gravar.addEventListener("click",()=>{
         "f_dtnasc":f_dtnasc.value
     }
     
+    /**cabeçalho com as informações, tendo o método do envio e a conversão dos dados para JSON */
     const cabecalho = {
         method:"POST",
         body:JSON.stringify(dados)
     }
 
+    /**obtendo o endpoint do servidor do node-red */
     const endpoint = "http://127.0.0.1:1880/addcontatos";
     fetch(endpoint,cabecalho)
     .then(res=>{
         /**se esse resultado tiver o status como 200 então está OK*/
         if(res.status == 200){
-            console.log("OK");
+            reset();
         }else{
             /**emitir um erro */
             alert("erro ao gravar novo contato");
@@ -36,8 +38,24 @@ btn_gravar.addEventListener("click",()=>{
     })
 
 })
-
+/**
+ * o que o botão cancelar vai fazer é limpar os cursores e focar no primeiro campo
+ * 
+ */
 btn_cancelar.addEventListener("click",()=>{
-
+    reset()
 })
 
+/**
+ * Limpa todos os campos do formulário e posiciona o foco no campo de nome.
+ *
+ * Esta função é útil após o envio do formulário ou quando se deseja reiniciar o preenchimento.
+ * 
+ */
+function reset() {
+    f_nome.value = "";
+    f_celular.value = "";
+    f_email.value = "";
+    f_dtnasc.value = "";
+    f_nome.focus();
+}

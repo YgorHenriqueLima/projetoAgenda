@@ -3,10 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilos/style.css">
+    <link rel="stylesheet" href="./estilos/pesquisar.css">
     <title>Pesquisar</title>
 </head>
 <body>
-   <h1>pesquisar</h1>
+    <!--nesta div terá a parte de pesquisa, onde quero saber o contato da pessoa-->
+    <div id="pesquisa" class="pesquisa">
+        <div class="campoPesq">
+            <input type="radio" name="f_pesq" value="id" id="id">
+            <label for="id">ID</label>
+        </div>
+
+        <div class="campoPesq">
+            <input type="radio" name="f_pesq" value="nome" id="nome" checked>
+            <label for="nome">Nome</label>
+        </div>
+
+        <div class="campoPesq">
+            <input type="radio" name="f_pesq" value="email" id="email">
+            <label for="email">Email</label>
+        </div>
+        
+        <div class="campoPesq">
+            <input type="radio" name="f_pesq" value="nasc" id="nasc">
+            <label for="nasc">Data de nascimento</label>
+        </div>
+
+
+        <div class="campoPesq">
+            <label for="f_txtpesq">Pesquisar</label>
+            <input type="text" name="f_txtpesq" id="f_txtpesq">
+        </div>
+
+
+        <div class="campoPesq">
+            <button id="btn_pesq" class="btn_pesq">Pesquisar</button>
+        </div>
+
+    </div>
+
+    <div id="resultado">
+
+    </div>
+    <script src="scripts/pesquisar.js"></script>
 </body>
 </html>
